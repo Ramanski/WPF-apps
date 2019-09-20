@@ -1,0 +1,54 @@
+﻿<Window x:Class="ComboBox_ListBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComboBox_ListBox"
+        mc:Ignorable="d"
+        Title="ListBox app" Height="577.76" Width="643.849">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="TextAlignment" Value="Right" />
+            <Setter Property="Padding" Value="0,0,5,0" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Width" Value="69" />
+            <Setter Property="FontSize" Value="19" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="Xstart" Text=""   />
+        <Label Grid.Row="1" Grid.Column="0" x:Name="lXstart" Content="X start" />
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="Xstop" Text=""   />
+        <Label Grid.Row="2" Grid.Column="0" x:Name="lXstop" Content="X stop" />
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="Tstep" Text=""   />
+        <Label Grid.Row="3" Grid.Column="0" x:Name="lstep" Content="Step" />
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="Ngroup" Text=""   />
+        <Label Grid.Row="4" Grid.Column="0" x:Name="lNgroup" Content="N" />
+        <ListBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="6" x:Name="listBox" Margin="5,0,5,5"/>
+        <Label Grid.Row="0" Grid.Column="2" x:Name="lResults" Content="Results" HorizontalAlignment="Center"/>
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="calc" Content="Calculate" Margin="10" FontSize="17" Click="Calc_Click"/>
+    </Grid>
+</Window>
