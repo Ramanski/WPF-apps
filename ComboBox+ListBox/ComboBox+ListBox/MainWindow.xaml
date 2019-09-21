@@ -23,7 +23,7 @@
             <Setter Property="FontSize" Value="15"/>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="50"/>
@@ -39,16 +39,16 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="Xstart" Text=""   />
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="Xstart" Text="{Binding Path=xStart}"/>
         <Label Grid.Row="1" Grid.Column="0" x:Name="lXstart" Content="X start" />
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="Xstop" Text=""   />
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="Xstop" Text="{Binding Path=xStop}"/>
         <Label Grid.Row="2" Grid.Column="0" x:Name="lXstop" Content="X stop" />
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="Tstep" Text=""   />
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="Tstep" Text="{Binding Path=step}"/>
         <Label Grid.Row="3" Grid.Column="0" x:Name="lstep" Content="Step" />
-        <TextBox Grid.Row="4" Grid.Column="1" x:Name="Ngroup" Text=""   />
-        <Label Grid.Row="4" Grid.Column="0" x:Name="lNgroup" Content="N" />
-        <ListBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="6" x:Name="listBox" Margin="5,0,5,5"/>
-        <Label Grid.Row="0" Grid.Column="2" x:Name="lResults" Content="Results" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="Ngroup" Text="{Binding Path=n}"/>
+        <Label Grid.Row="4" Grid.Column="0" x:Name="lNgroup" Content="N"/>
         <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="calc" Content="Calculate" Margin="10" FontSize="17" Click="Calc_Click"/>
+        <Label Grid.Row="0" Grid.Column="2" x:Name="lResults" Content="Results" HorizontalAlignment="Center"/>
+        <ListBox Grid.Row="1" Grid.Column="2" Grid.RowSpan="6" x:Name="listBox" Margin="5,0,5,5"/>
     </Grid>
 </Window>

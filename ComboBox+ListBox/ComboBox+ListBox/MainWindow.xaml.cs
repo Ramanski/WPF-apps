@@ -7,6 +7,14 @@ namespace ComboBox_ListBox
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    class Values
+    {
+        public double xStart { get; set; }
+        public double xStop { get; set; }
+        public double n { get; set; }
+        public double step { get; set; }
+    } 
+
     public partial class MainWindow : Window
     {
         delegate int Factorial(int x);
@@ -14,6 +22,8 @@ namespace ComboBox_ListBox
         {
             InitializeComponent();
             Xstart.Focus();
+            Values values = new Values();
+            grid.DataContext = values;
         }
 
         private double ParseDouble(TextBox textBox)
