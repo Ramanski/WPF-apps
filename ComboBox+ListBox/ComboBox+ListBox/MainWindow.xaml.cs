@@ -11,63 +11,61 @@ namespace ComboBox_ListBox
     {
         public double xStart { get; set; }
         public double xStop { get; set; }
-        public double n { get; set; }
-        public double step { get; set; }
+        private double step;
+        private int n;
+
+        public int N
+        {
+            set {
+                try
+                {
+                    if (value <= 0)
+                        throw new ArgumentException("N value should be > 0");
+                    else
+                        n = value;
+                }
+                catch(ArgumentException exc)
+                {
+                    MessageBox.Show(exc.Message, "Error");
+                }
+            }
+            get
+            {
+                return n;
+            }
+        }
+        public double Step
+        {
+            set  {
+                try
+                {
+                    if (value <= 0)
+                        throw new ArgumentException("Step value should be > 0");
+                    else
+                        step = value;
+                }
+                catch (ArgumentException exc)
+                {
+                    MessageBox.Show(exc.Message, "Error");
+                }
+            }
+            get
+            {
+                return step;
+            }
+        }
     } 
 
     public partial class MainWindow : Window
     {
+        Values values;
         delegate int Factorial(int x);
         public MainWindow()
         {
             InitializeComponent();
             Xstart.Focus();
-            Values values = new Values();
+            values = new Values();
             grid.DataContext = values;
-        }
-
-        private double ParseDouble(TextBox textBox)
-        {
-            double result;
-            try
-            {
-                result = Convert.ToDouble(textBox.Text);                          
-                textBox.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.White);
-                return result;
-            }
-            catch(Exception exc)
-            {
-                textBox.ToolTip = "The value should be a number!";
-                textBox.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Coral);
-                textBox.Focus();
-                throw exc;
-            }
-        }
-
-        private int ParseInt(TextBox textBox)
-        {
-            int result;
-            try
-            {
-                result = int.Parse(textBox.Text);
-                if (result <= 0)
-                {
-                    textBox.ToolTip = "A value should be > 0";
-                    throw new Exception("Please check whether all numbers are entered correctly");
-                }
-                else
-                {
-                    textBox.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.White);
-                    return result;
-                }
-            }
-            catch (Exception exc)
-            {
-                textBox.ToolTip = "The value should a number!";
-                Ngroup.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Coral);
-                textBox.Focus();
-                throw exc;
-            }
         }
 
             Factorial factor = x =>
@@ -98,19 +96,12 @@ namespace ComboBox_ListBox
 
         private void Calc_Click(object sender, RoutedEventArgs e)
         {
-            double xStart, xStop, step;
-            int n;
-
             listBox.Items.Clear();
             try
             {
-                xStart = ParseDouble(Xstart);
-                xStop = ParseDouble(Xstop);
-                if (xStart > xStop)
+                if (values.xStart > values.xStop)
                     throw new Exception("xStop should be larger than xStart");
-                step = ParseDouble(Tstep);
-                n = ParseInt(Ngroup);
-                calculate(xStart, xStop, step, n);
+                calculate(values.xStart, values.xStop, values.Step, values.N);
             }
             catch (Exception exc)
             {

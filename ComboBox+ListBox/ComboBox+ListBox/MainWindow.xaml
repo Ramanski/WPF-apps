@@ -7,7 +7,25 @@
         mc:Ignorable="d"
         Title="ListBox app" Height="577.76" Width="643.849">
     <Window.Resources>
+        <ControlTemplate x:Key="ErrorTempl">
+            <StackPanel Orientation="Horizontal">
+                <Border BorderThickness="2" BorderBrush="Red">
+                    <AdornedElementPlaceholder>
+                    </AdornedElementPlaceholder>
+                </Border>
+                <Label FontSize="18" Foreground="Red" Content="*">
+                </Label>
+            </StackPanel>
+        </ControlTemplate>
         <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip" Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                    <Setter Property="Background" Value="Pink"/>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="Validation.ErrorTemplate" Value="{StaticResource ErrorTempl}"/>
             <Setter Property="HorizontalAlignment" Value="Left" />
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="Height" Value="30" />
@@ -39,13 +57,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="Xstart" Text="{Binding Path=xStart}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="Xstart" Text="{Binding Path=xStart, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" />
         <Label Grid.Row="1" Grid.Column="0" x:Name="lXstart" Content="X start" />
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="Xstop" Text="{Binding Path=xStop}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="Xstop" Text="{Binding Path=xStop, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" />
         <Label Grid.Row="2" Grid.Column="0" x:Name="lXstop" Content="X stop" />
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="Tstep" Text="{Binding Path=step}"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="Tstep" Text="{Binding Path=Step, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" />
         <Label Grid.Row="3" Grid.Column="0" x:Name="lstep" Content="Step" />
-        <TextBox Grid.Row="4" Grid.Column="1" x:Name="Ngroup" Text="{Binding Path=n}"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="Ngroup" Text="{Binding Path=N, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" />
         <Label Grid.Row="4" Grid.Column="0" x:Name="lNgroup" Content="N"/>
         <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="calc" Content="Calculate" Margin="10" FontSize="17" Click="Calc_Click"/>
         <Label Grid.Row="0" Grid.Column="2" x:Name="lResults" Content="Results" HorizontalAlignment="Center"/>
