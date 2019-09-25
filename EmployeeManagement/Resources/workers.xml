@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workers>
+  <worker second_name="Gates">
+    <salary>99999$</salary>
+    <post>Director</post>
+    <city>Washington</city>
+    <street>Fith avenue</street>
+    <house>34</house>
+  </worker>
+  <worker second_name="Ivanova">
+    <salary>500$</salary>
+    <post>Teacher</post>
+    <city>Minsk</city>
+    <street>Stekolnaja</street>
+    <house>10</house>
+  </worker>
+  <worker second_name="Herasimenia">
+    <salary>1400$</salary>
+    <post>Sporsman</post>
+    <city>Minsk</city>
+    <street>Drozdy</street>
+    <house>23</house>
+  </worker>
+  <worker second_name="Petrov">
+    <salary>782$</salary>
+    <post>Security</post>
+    <city>Gomel</city>
+    <street>Krasnoarmejskaja</street>
+    <house>2</house>
+  </worker>
+  <worker second_name="Sidorov">
+    <salary>222$</salary>
+    <post>Medician</post>
+    <city>Minsk</city>
+    <street>Majakovskogo</street>
+    <house>10</house>
+  </worker>
+  <worker second_name="Komarovich">
+    <salary>430$</salary>
+    <post>Medician</post>
+    <city>Gomel</city>
+    <street>Krasnoarmejskaja</street>
+    <house>1a</house>
+  </worker>
+  <worker second_name="Isakov">
+    <salary>400</salary>
+    <post>Medician</post>
+    <city>Gomel</city>
+    <street>Krasnoarmejskaja</street>
+    <house>3</house>
+  </worker>
+  <worker second_name="Putin">
+    <salary>10000</salary>
+    <post>Director</post>
+    <city>Moscow</city>
+    <street>Lenina</street>
+    <house>1</house>
+  </worker>
+  <worker second_name="Lyashko">
+    <salary>10</salary>
+    <post>Engineer</post>
+    <city>Moscow</city>
+    <street>Lenina</street>
+    <house>2a</house>
+  </worker>
+  <worker second_name="Potapov">
+    <salary>1000</salary>
+    <post>CTO</post>
+    <city>Washington</city>
+    <street>Fith avenue</street>
+    <house>3</house>
+  </worker>
+  <worker second_name="Maluszewski">
+    <salary>1050</salary>
+    <post>Director</post>
+    <city>Warsaw</city>
+    <street>Swietokzyska</street>
+    <house>22</house>
+  </worker>
+  <worker second_name="Radeonov">
+    <salary>2302</salary>
+    <post>CTO</post>
+    <city>Minsk</city>
+    <street>Titova</street>
+    <house>3</house>
+  </worker>
+  <worker second_name="Buuorgan">
+    <salary>2020</salary>
+    <post>Teacher</post>
+    <city>London</city>
+    <street>Baker</street>
+    <house>4</house>
+  </worker>
+</workers>
