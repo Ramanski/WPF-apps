@@ -7,34 +7,98 @@
         mc:Ignorable="d"
         x:Name="mainWindow"
         MouseMove="Canvas_MouseMove"
-        MouseLeftButtonDown="Canvas_MouseLeftButtonDown"
-        Title="MainWindow" Height="450" Width="800">
-    <Canvas x:Name="canvas">
-        <Canvas x:Name="Fcanvas" Height="40" Width="60" Canvas.Top="50" Canvas.Left="10">
-            <Canvas.Background>
-                <DrawingBrush>
-                    <DrawingBrush.Drawing>
-                        <DrawingGroup x:Name="Figure">
-                            <GeometryDrawing Brush="Aquamarine">
-                                <GeometryDrawing.Pen>
-                                    <Pen Brush="Black" Thickness="1" />
-                                </GeometryDrawing.Pen>
-                                <GeometryDrawing.Geometry>
-                                    <PathGeometry>
-                                        <PathFigure x:Name="Rhomb" IsClosed="False" IsFilled="True" StartPoint="20,0">
-                                            <LineSegment x:Name="Fleft" Point="0,30" />
-                                            <LineSegment x:Name="Fbottom" Point="20,60" />
-                                            <LineSegment x:Name="Fright" Point="40,30" />
-                                            <LineSegment x:Name="Ftop" Point="20,0" />
-                                        </PathFigure>
-                                    </PathGeometry>
-                                </GeometryDrawing.Geometry>
-                            </GeometryDrawing>
-                        </DrawingGroup>
-                    </DrawingBrush.Drawing>
-                </DrawingBrush>
-            </Canvas.Background>
-        </Canvas>
-        <Label x:Name="label" Content="Label" Canvas.Left="30" Canvas.Top="388"/>
-    </Canvas>
+        Title="New masterpiece" Height="450" Width="800">
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="CommandBinding_Executed_New"></CommandBinding>
+        <CommandBinding Command="Open"
+                        Executed="CommandBinding_Executed_Open"/>
+        <CommandBinding Command="Save"
+                        Executed="CommandBinding_Executed_Save"/>
+        <CommandBinding Command="Close"
+                        Executed="CommandBinding_Executed_Close"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Background="Wheat" Grid.Row="0" Grid.ColumnSpan="2" Panel.ZIndex="3">
+            <Menu  x:Name="menu" Height="Auto" Width="Auto" HorizontalAlignment="Left" >
+                <MenuItem Header="Program">
+                    <MenuItem Command="Close" Header="E_xit">
+                        <MenuItem.Icon>
+                            <Image Source="Icons\exit.png" HorizontalAlignment="Right" Width="15"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Project">
+                    <MenuItem Command="New" Header="New">
+                        <MenuItem.Icon>
+                            <Image Source="Icons\add.png" HorizontalAlignment="Right" Width="15"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Command="Open" Header="_Open">
+                        <MenuItem.Icon>
+                            <Image Source="Icons\open.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Command="Save" Header="Save">
+                        <MenuItem.Icon>
+                            <Image Source="Icons\save.png" HorizontalAlignment="Right" Width="15"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Manage">
+                    <MenuItem Header="Colors...">
+                        <MenuItem.Icon>
+                            <Image Source="Icons\colors.png" HorizontalAlignment="Right" Width="15"></Image>
+                        </MenuItem.Icon>
+                        <MenuItem Header="Background" Click="MenuItem_Background"/>
+                        <MenuItem Header="Stroke" Click="MenuItem_Stroke"/>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </Border>
+        <StackPanel Grid.Column="0" Grid.Row="1" Panel.ZIndex="2" Background="Wheat">
+            <Button Background="Wheat">
+                <StackPanel>
+                    <Label Content="Thickness" FontSize="11" HorizontalAlignment="Center"/>
+                    <Slider x:Name="slThickness" TickPlacement="BottomRight" Value="1" IsSnapToTickEnabled="True" TickFrequency="1" Height="20" Width="80" ValueChanged="slThickness_ValueChanged"/>
+                    <Label HorizontalAlignment="Center" Content="{Binding ElementName=slThickness, Path=Value}"/>
+                </StackPanel>
+            </Button>
+            <Button Background="Wheat">
+                <StackPanel>
+                    <Label Content="Size" FontSize="11" HorizontalAlignment="Center"/>
+                    <Slider x:Name="slSize" TickPlacement="BottomRight" Value="3" IsSnapToTickEnabled="True" TickFrequency="1" Height="20" Width="80" ValueChanged="slSize_ValueChanged"/>
+                    <Label HorizontalAlignment="Center" Content="{Binding ElementName=slSize, Path=Value}"/>
+                </StackPanel>
+            </Button>
+            <Button Click="MenuItem_Background" Background="Wheat">
+                <StackPanel>
+                    <Label Content="Backgound color" FontSize="11" HorizontalAlignment="Center"/>
+                    <Button Height="25" Width="25" x:Name="BuFon" MouseEnter="BuFon_MouseEnter"/>
+                </StackPanel>
+            </Button>
+            <Button Click="MenuItem_Stroke" Background="Wheat">
+                <StackPanel>
+                    <Label Content="Stroke color" FontSize="11" HorizontalAlignment="Center"/>
+                    <Button Height="25" Width="25"  x:Name="BuStoke" MouseEnter="BuFon_MouseEnter"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="1" Grid.Row="1">
+            <Canvas x:Name="canvas" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" Background="White">
+                
+            </Canvas>
+            </Border>
+        <Label Content="Coordinates" Grid.Column="0" Grid.Row="2" Background="Wheat" Padding="5,0"/>
+        <StatusBarItem x:Name="status" Background="Wheat" Grid.Column="1" Grid.Row="2" Padding="0,0" Panel.ZIndex="3"/>
+    </Grid>
 </Window>
