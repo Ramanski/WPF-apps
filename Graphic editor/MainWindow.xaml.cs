@@ -30,6 +30,7 @@ namespace Graphic_editor
             BuStoke.Background = new SolidColorBrush(Color.FromRgb(rhombSet.outerColor[0], rhombSet.outerColor[1], rhombSet.outerColor[2]));
         }
 
+        //Returns the rhomb as a figure based on current rhomb settings
         public Polygon createRhomb(RhombSettings rhombSet)
         {
             Polygon polygon = new Polygon();
@@ -139,17 +140,7 @@ namespace Graphic_editor
 
         private void CommandBinding_Executed_Close(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
         {
-            if (canvas.Children.Count > 0)
-                switch (System.Windows.MessageBox.Show("Do you want to save your work?", "Save Dialog", MessageBoxButton.YesNoCancel))
-                {
-                    case MessageBoxResult.Yes:
-                        CommandBinding_Executed_Save(mainWindow, e);
-                        break;
-                    case MessageBoxResult.No:
-                        Close();
-                        break;
-                }
-            else Close();
+            App.Current.Shutdown();
         }
 
         private void CommandBinding_Executed_Save(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
@@ -173,6 +164,24 @@ namespace Graphic_editor
         {
             BuFon.Background = new SolidColorBrush(Color.FromRgb(rhombSet.fillColor[0], rhombSet.fillColor[1], rhombSet.fillColor[2]));
             BuStoke.Background = new SolidColorBrush(Color.FromRgb(rhombSet.outerColor[0], rhombSet.outerColor[1], rhombSet.outerColor[2]));
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (canvas.Children.Count > 0)
+                switch (System.Windows.MessageBox.Show("Do you want to save your work?", "Save Dialog", MessageBoxButton.YesNoCancel))
+                {
+                    case MessageBoxResult.Yes:
+                        CommandBinding_Executed_Save(mainWindow, null);
+                        break;
+                    case MessageBoxResult.No:
+                        App.Current.Shutdown();
+                        break;
+                    case MessageBoxResult.Cancel:
+                        e.Cancel = true;
+                        break;
+                }
+            else e.Cancel = false;
         }
     }
 

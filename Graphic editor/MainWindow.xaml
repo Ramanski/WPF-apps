@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         x:Name="mainWindow"
         MouseMove="Canvas_MouseMove"
-        Title="New masterpiece" Height="450" Width="800">
+        Title="New masterpiece" Height="450" Width="800" Closing="MainWindow_Closing">
     <Window.CommandBindings>
         <CommandBinding Command="New" Executed="CommandBinding_Executed_New"></CommandBinding>
         <CommandBinding Command="Open"
@@ -69,14 +69,14 @@
             <Button Background="Wheat">
                 <StackPanel>
                     <Label Content="Thickness" FontSize="11" HorizontalAlignment="Center"/>
-                    <Slider x:Name="slThickness" TickPlacement="BottomRight" Value="1" IsSnapToTickEnabled="True" TickFrequency="1" Height="20" Width="80" ValueChanged="slThickness_ValueChanged"/>
+                    <Slider x:Name="slThickness" TickPlacement="BottomRight" Minimum="1" Maximum="10" Value="1" IsSnapToTickEnabled="True" TickFrequency="1" Height="20" Width="80" ValueChanged="slThickness_ValueChanged"/>
                     <Label HorizontalAlignment="Center" Content="{Binding ElementName=slThickness, Path=Value}"/>
                 </StackPanel>
             </Button>
             <Button Background="Wheat">
                 <StackPanel>
                     <Label Content="Size" FontSize="11" HorizontalAlignment="Center"/>
-                    <Slider x:Name="slSize" TickPlacement="BottomRight" Value="3" IsSnapToTickEnabled="True" TickFrequency="1" Height="20" Width="80" ValueChanged="slSize_ValueChanged"/>
+                    <Slider x:Name="slSize" TickPlacement="BottomRight" Minimum="1" Maximum="10" Value="3" IsSnapToTickEnabled="True" TickFrequency="1" Height="20" Width="80" ValueChanged="slSize_ValueChanged"/>
                     <Label HorizontalAlignment="Center" Content="{Binding ElementName=slSize, Path=Value}"/>
                 </StackPanel>
             </Button>
