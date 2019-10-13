@@ -1,0 +1,13 @@
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\bin\Debug\netcoreapp3.0\HorseActivity.deps.json
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\bin\Debug\netcoreapp3.0\HorseActivity.dll
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\bin\Debug\netcoreapp3.0\HorseActivity.pdb
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\HorseActivity.csprojAssemblyReference.cache
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\UserControl1.g.cs
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\HorseActivity_MarkupCompile.cache
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\HorseActivity_MarkupCompile.lref
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\UserControl1.baml
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\HorseActivity.g.resources
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\HorseActivity.AssemblyInfoInputs.cache
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\HorseActivity.AssemblyInfo.cs
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\HorseActivity.dll
+C:\Users\Dondan\source\repos\WPF-apps\HorseActivity\obj\Debug\netcoreapp3.0\HorseActivity.pdb

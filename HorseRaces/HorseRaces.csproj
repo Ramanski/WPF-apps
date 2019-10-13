@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{743C8263-F973-4DB9-AE2B-C5FF8BBF92EA}</ProjectGuid>
+    <ProjectGuid>{80D3A3D3-99CF-41B1-A981-8AC17C5740BF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Running_horse</RootNamespace>
-    <AssemblyName>Running horse</AssemblyName>
+    <RootNamespace>HorseRaces</RootNamespace>
+    <AssemblyName>HorseRaces</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HorseActivity">
+      <HintPath>..\HorseActivity\bin\Debug\netcoreapp3.0\HorseActivity.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -95,20 +98,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\field-grass.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\1.png" />
-    <Resource Include="Resources\10.png" />
-    <Resource Include="Resources\11.png" />
-    <Resource Include="Resources\2.png" />
-    <Resource Include="Resources\3.png" />
-    <Resource Include="Resources\4.png" />
-    <Resource Include="Resources\5.png" />
-    <Resource Include="Resources\6.png" />
-    <Resource Include="Resources\7.png" />
-    <Resource Include="Resources\8.png" />
-    <Resource Include="Resources\9.png" />
+    <Resource Include="Resources\running-track.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
