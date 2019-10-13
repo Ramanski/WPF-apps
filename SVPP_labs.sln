@@ -7,9 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Lab1\Calculator.csproj", "{E86FD11D-9EB3-43A2-B76C-F07C148DFB8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox+ListBox", "ComboBox+ListBox\ComboBox+ListBox\ComboBox+ListBox.csproj", "{7F86EBC1-AC95-4AFE-9A4A-105EC14C0A5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionSolver", "ComboBox+ListBox\ComboBox+ListBox\FunctionSolver.csproj", "{7F86EBC1-AC95-4AFE-9A4A-105EC14C0A5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveButton", "MovingButton\lab2\MoveButton.csproj", "{F282B747-D395-4ED8-8010-9DE52F8D8E25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovingButton", "MovingButton\lab2\MovingButton.csproj", "{F282B747-D395-4ED8-8010-9DE52F8D8E25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement", "EmployeeManagement\EmployeeManagement.csproj", "{8841EC91-E499-4858-B392-B270C1A83884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphic editor", "Graphic editor\Graphic editor.csproj", "{8E37A4E0-E290-40CD-BD66-01BCD6F16F68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorseRaces", "HorseRaces\HorseRaces.csproj", "{80D3A3D3-99CF-41B1-A981-8AC17C5740BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HorseActivity", "HorseActivity\HorseActivity.csproj", "{A7F038B8-856C-4660-94F2-EAF077067A19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{F282B747-D395-4ED8-8010-9DE52F8D8E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F282B747-D395-4ED8-8010-9DE52F8D8E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F282B747-D395-4ED8-8010-9DE52F8D8E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8841EC91-E499-4858-B392-B270C1A83884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8841EC91-E499-4858-B392-B270C1A83884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8841EC91-E499-4858-B392-B270C1A83884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8841EC91-E499-4858-B392-B270C1A83884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E37A4E0-E290-40CD-BD66-01BCD6F16F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E37A4E0-E290-40CD-BD66-01BCD6F16F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E37A4E0-E290-40CD-BD66-01BCD6F16F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E37A4E0-E290-40CD-BD66-01BCD6F16F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D3A3D3-99CF-41B1-A981-8AC17C5740BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D3A3D3-99CF-41B1-A981-8AC17C5740BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D3A3D3-99CF-41B1-A981-8AC17C5740BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D3A3D3-99CF-41B1-A981-8AC17C5740BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F038B8-856C-4660-94F2-EAF077067A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F038B8-856C-4660-94F2-EAF077067A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F038B8-856C-4660-94F2-EAF077067A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F038B8-856C-4660-94F2-EAF077067A19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,13 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         MouseMove="Canvas_MouseMove"
-        x:Name="win">
+        x:Name="win" SizeChanged="Win_SizeChanged">
     <Grid >
-        <Canvas x:Name="canvas">
-            <Button x:Name="but_yes" Content="Да" HorizontalAlignment="Left" Margin="230,210" VerticalAlignment="Top" Width="99" Height="36" Click="But_yes_Click"/>
-            <Button x:Name="but_no" Content="Нет" MouseEnter="No_MouseEnter" HorizontalAlignment="Left" Margin="410,210" VerticalAlignment="Top" Width="99" Height="36"/>
-            <Label x:Name="label" Content="Вам нравится программирование?" HorizontalAlignment="Left" Margin="254,125,0,0" VerticalAlignment="Top" FontSize="15"/>
-            <Label x:Name="label1" Content="" Canvas.Left="254" Canvas.Top="351"/>
+        <Canvas x:Name="canvas" Background="ForestGreen" MouseMove="No_MouseMove">
+            <Button x:Name="but_yes" Content="Да" Canvas.Left="230" Canvas.Top="210" Width="100" Height="36" Click="But_yes_Click"/>
+            <Button x:Name="but_no" Content="Нет" Canvas.Left="390" Canvas.Top="180" Width="100" Height="36" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Visible"/>
+                <Label x:Name="label" Content="Вам нравится легкая атлетика?" Canvas.Left="254" Canvas.Top="125" FontSize="15"/>
         </Canvas>
     </Grid>
 </Window>
