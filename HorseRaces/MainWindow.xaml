@@ -5,21 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HorseRaces"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
-        <PathGeometry x:Key="path">
-            <PathFigure StartPoint="10,0">
-                <LineSegment Point="700,0"/>
-            </PathFigure>
-        </PathGeometry>
-    </Window.Resources>
+        Title="MainWindow" Height="470" Width="800">
     <Canvas x:Name="canvas">
         <Canvas.Background>
             <ImageBrush ImageSource="Resources\running-track.jpg"/>
         </Canvas.Background>
-        <Line X1="700" Y1="25" X2="700" Y2="295" Stroke="Red" StrokeThickness="6"/>
-        <ContentControl x:Name="horse" Width="70"/>
-        <Label x:Name="label" Content="Label" Canvas.Left="361" Canvas.Top="296"/>
-        <Button x:Name="start_button" Content="Start!" Canvas.Left="208" Canvas.Top="320" Width="74" Click="start_button_Click"/>
+        <Line x:Name="finishLine" X1="700" Y1="30" X2="700" Y2="375" Stroke="Red" StrokeThickness="6"/>
+        <local:Horse x:Name="horse1" Canvas.Top="20" Canvas.Left="42" />
+        <local:Horse x:Name="horse2" Canvas.Top="66" Canvas.Left="42"/>
+        <local:Horse x:Name="horse3" Canvas.Top="112" Canvas.Left="42"/>
+        <local:Horse x:Name="horse4" Canvas.Top="158" Canvas.Left="42"/>
+        <local:Horse x:Name="horse5" Canvas.Top="206" Canvas.Left="42"/>
+        <local:Horse x:Name="horse6" Canvas.Top="254" Canvas.Left="42"/>
+        <local:Horse x:Name="horse7" Canvas.Top="300" Canvas.Left="42"/>
+        <Button x:Name="start_button" Content="Start!" Canvas.Left="218" Canvas.Top="413" Width="74" Click="start_button_Click"/>
     </Canvas>
 </Window>

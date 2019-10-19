@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:HorseRaces"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <BitmapImage x:Key="step1" UriSource="Resources/1.png"/>
+        <BitmapImage x:Key="step2" UriSource="Resources/2.png"/>
+        <BitmapImage x:Key="step3" UriSource="Resources/3.png"/>
+        <BitmapImage x:Key="step4" UriSource="Resources/4.png"/>
+        <BitmapImage x:Key="step5" UriSource="Resources/5.png"/>
+        <BitmapImage x:Key="step6" UriSource="Resources/6.png"/>
+        <BitmapImage x:Key="step7" UriSource="Resources/7.png"/>
+        <BitmapImage x:Key="step8" UriSource="Resources/8.png"/>
+        <BitmapImage x:Key="step9" UriSource="Resources/9.png"/>
+        <BitmapImage x:Key="step10" UriSource="Resources/10.png"/>
+        <BitmapImage x:Key="step11" UriSource="Resources/11.png"/>
     </Application.Resources>
 </Application>
