@@ -1,0 +1,16 @@
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\bin\Debug\Multithread solver.exe.config
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\bin\Debug\Multithread solver.exe
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\bin\Debug\Multithread solver.pdb
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\Multithread solver.csprojAssemblyReference.cache
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\MainWindow.g.cs
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\App.g.cs
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\Multithread solver_MarkupCompile.cache
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\Multithread solver_MarkupCompile.lref
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\MainWindow.baml
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\Multithread solver.g.resources
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\Multithread_solver.Properties.Resources.resources
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\Multithread solver.csproj.GenerateResource.cache
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\Multithread solver.exe
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\Multithread solver.pdb
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\TaskWindow.g.cs
+C:\Users\Dondan\source\repos\WPF-apps\Multithread solver\obj\Debug\TaskWindow.baml
