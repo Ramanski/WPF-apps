@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="RunningEase.cs" />
     <Page Include="Horse.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,7 +103,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\running-track.jpg" />
+    <Resource Include="Resources\running-track2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\1.png" />
@@ -116,6 +117,9 @@
     <Resource Include="Resources\7.png" />
     <Resource Include="Resources\8.png" />
     <Resource Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\running-track.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

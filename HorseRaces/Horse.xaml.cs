@@ -31,7 +31,12 @@ namespace HorseRaces
             storyboard.Children[0].RepeatBehavior = new RepeatBehavior(int.MaxValue);
         }
 
-        public void startMoving() => storyboard.Begin();
+        public void changeSpeed(int duration)
+        {
+            storyboard.Stop();
+            storyboard.Children[0].Duration = TimeSpan.FromMilliseconds(100*duration);
+            storyboard.Begin();
+        }
 
         public void stopMoving() => storyboard.Stop();
     }
